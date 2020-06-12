@@ -14,7 +14,7 @@ wrapper:
   type: object
   properties:
     width:
-      type: integer
+      type: [integer, string]
     class:
       type: string
     id:

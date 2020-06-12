@@ -9,7 +9,7 @@ composer require jofrysutanto/windsor "^0.9"
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
 ```
-- Create YAML entry file at `your-theme/acf-fields/index.yaml`. At minimum, your entry file should contain:
+- Create YAML entry file at `[your-active-theme]/acf-fields/index.yaml`, where `[your-active-theme]` refers to your currently active Wordpress theme directory. At minimum, your entry file should contain:
 ```yaml
 fields: []
 pages: []

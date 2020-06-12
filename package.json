@@ -18,7 +18,9 @@
   "dependencies": {
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
-    "read-yaml": "^1.1.0"
+    "read-yaml": "^1.1.0",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-tabs": "^0.3.0"
   },
   "devDependencies": {
     "vuepress": "^1.5.1"

@@ -35,6 +35,7 @@ Defaults to `\Windsor\Parser\YamlParser`
 
 ### rules
 Array of transformation rules when transforming `fields` and `groups`.
+You may also use `acf-windsor/config/rules` filter to modify only these rules, if preferred.
 
-For more information, refer to [Transformation Rules](/rules/intro)
+For more information, refer to [Transformation Rules](/rules)
 
