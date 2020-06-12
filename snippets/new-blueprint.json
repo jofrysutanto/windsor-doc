@@ -1,0 +1,11 @@
+{
+	"label": "New Blueprint",
+	"description": "Creates reusable fields as blueprint",
+	"body": [
+		"fields:",
+		"\t${1:my_field}:",
+		"\t\ttype: text",
+		"\t\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\t${0}"
+	]
+}

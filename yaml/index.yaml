@@ -6,6 +6,7 @@ required:
   - fields
 defaultSnippets:
   - "@snippets/new-field-group"
+  - "@snippets/new-blueprint"
 definitions:
   - "@yaml/definitions/fields"
   - "@yaml/definitions/input-default"
