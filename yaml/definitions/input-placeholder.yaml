@@ -1,0 +1,6 @@
+input_placeholder:
+  type: object
+  properties:
+    placeholder:
+      type: string
+      description: 'Appears within the input'

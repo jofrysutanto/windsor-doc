@@ -1,0 +1,16 @@
+if:
+  properties:
+    type:
+      const: "tab"
+then:
+  allOf:
+    -
+      properties:
+        placement:
+          type: string
+          enum: ['top', 'left']
+          default: 'top'
+        endpoint:
+          type: boolean
+          default: false
+          description: Define an endpoint for the previous tabs to stop. This will start a new group of tabs.

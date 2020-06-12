@@ -1,0 +1,12 @@
+{
+	"label": "Field: User Field",
+	"description": "Allow selection of existing user.",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: user",
+		"\trole: ${2:[]}",
+		"\treturn_format: ${3|'array','object','id'|}",
+		"${0}"
+	]
+}

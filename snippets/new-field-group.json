@@ -1,0 +1,17 @@
+{
+	"label": "New Field Group",
+	"description": "Creates new field group",
+	"body": [
+		"title: '${1:My Field Group}'",
+		"key: '${2:field_key}'",
+		"position: 'acf_after_title'",
+		"hide_on_screen: []",
+		"location:",
+		"\t-",
+		"\t\t-",
+		"\t\t\tparam: '${3:post_type}'",
+		"\t\t\toperator: '=='",
+		"\t\t\tvalue: '${4:post}'",
+		"fields: ${0:[]}"
+	]
+}

@@ -1,0 +1,13 @@
+if:
+  properties:
+    type:
+      const: "text"
+then:
+  allOf:
+    - $ref: "#/definitions/input_placeholder"
+    - $ref: "#/definitions/input_prepend_append"
+    - $ref: "#/definitions/input_default"
+    - properties:
+        maxlength:
+          type: integer
+          description: 'Character limit - omit this property for no limit'

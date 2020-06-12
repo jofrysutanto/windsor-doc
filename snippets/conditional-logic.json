@@ -1,0 +1,13 @@
+{
+	"label": "Conditional Rule",
+	"description": "Create conditional rule block",
+	"body": [
+		"conditional_logic:",
+		"\t-",
+		"\t\t-",
+		"\t\t\tfield: ${1:referred_field}",
+		"\t\t\toperator: ${2|'==','!=','==pattern','==contains','!=empty','==empty'|}",
+		"\t\t\tvalue: ${3:value}",
+		"${0}"
+	]
+}

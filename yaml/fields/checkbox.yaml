@@ -1,0 +1,24 @@
+if:
+  properties:
+    type:
+      const: "checkbox"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/choices"
+    -
+      properties:
+        default_value:
+          type: ['string', 'array']
+          description: "Default value; if multiple values are allowed, you can provide array of default values."
+        allow_custom:
+          type: boolean
+          description: "Allow 'custom' values to be added"
+        layout:
+          type: string
+          description: "Layout arrangement for choices"
+          enum: ['horizontal', 'vertical']
+        toggle:
+          type: boolean
+          description: "Prepend an extra checkbox to toggle all choices"
+          default: false

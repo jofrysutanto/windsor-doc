@@ -1,0 +1,48 @@
+description: Location of this field. You may set this null to hide this field.
+type:
+  - "null"
+  - array
+pattern: "^[a-z0-9-_]+$"
+defaultSnippets:
+  - "@snippets/location"
+items:
+  type: array
+  items:
+    type: object
+    properties:
+      param:
+        type: string
+        description: The location type to be tested. e.g. 'post_type'
+        enum:
+        - post_type
+        - post_template
+        - post_status
+        - post_format
+        - post_category
+        - post_taxonomy
+        - post
+        - page_template
+        - page_type
+        - page_parent
+        - page
+        - current_user
+        - current_user_role
+        - user_form
+        - user_role
+        - taxonomy
+        - attachment
+        - comment
+        - widget
+        - nav_menu
+        - nav_menu_item
+        - block
+        - options_page
+      operator:
+        type: string
+        description:
+          Choose logical operator used for comparison, for example
+          '==' or '!='
+        enum: ['==', '!=']
+      value:
+        type: string
+        description: The location value to be tested. e.g. 'post'

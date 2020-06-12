@@ -1,0 +1,23 @@
+if:
+  properties:
+    type:
+      const: "google_map"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        center_lat:
+          type: number
+          description: "Default center latitude position"
+        center_lng:
+          type: number
+          description: "Default center longitude position"
+        zoom:
+          type: integer
+          description: "Default zoom level"
+          default: 14
+        height:
+          type: number
+          description: "Customise map height"
+          default: 400

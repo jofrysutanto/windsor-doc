@@ -1,0 +1,12 @@
+{
+	"label": "Layout: Repeater",
+	"description": "Create repeatable groups of fields",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"repeater\"",
+		"\tlayout: \"${2|block,table,row|}\"",
+		"\tsub_fields:",
+		"\t\t${0}"
+	]
+}

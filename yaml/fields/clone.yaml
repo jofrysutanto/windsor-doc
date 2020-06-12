@@ -1,0 +1,25 @@
+if:
+  properties:
+    type:
+      const: "clone"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        clone:
+          type: array
+          description: "Specify field names to be cloned."
+        display:
+          type: string
+          description: "Specify the style used to render the clone field."
+          enum: ['group', 'seamless']
+        prefix_label:
+          type: boolean
+          description: 'Prefix field label.'
+          default: false
+        prefix_name:
+          type: boolean
+          description: 'Prefix field name.'
+          default: false
+      required: ["clone", "display"]

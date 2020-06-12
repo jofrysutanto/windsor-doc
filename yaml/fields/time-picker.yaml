@@ -1,0 +1,17 @@
+if:
+  properties:
+    type:
+      const: "time_picker"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        display_format:
+          type: string
+          default: 'g:i a'
+          description: "The format displayed when editing a post. Use PHP `date()` formatting rule."
+        return_format:
+          type: string
+          default: 'g:i a'
+          description: "The format returned via template functions. Use PHP `date()` formatting rule."

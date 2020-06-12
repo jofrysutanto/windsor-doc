@@ -1,0 +1,15 @@
+{
+	"label": "Layout: Clone",
+	"description": "Create fields composed of existing custom fields.",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"clone\"",
+		"\tdisplay: \"${2|group,seamless|}\"",
+		"\tprefix_label: false",
+		"\tprefix_name: false",
+		"\tclone:",
+		"\t\t- \"${3:other_field}\"",
+		"${0}"
+	]
+}

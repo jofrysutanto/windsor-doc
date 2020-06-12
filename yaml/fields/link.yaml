@@ -1,0 +1,13 @@
+if:
+  properties:
+    type:
+      const: "link"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        return_format:
+          type: string
+          enum: ['array', 'url']
+          default: 'array'

@@ -1,0 +1,12 @@
+{
+	"label": "Field: Time Picker Field",
+	"description": "Renders time picker widget",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"time_picker\"",
+		"\tdisplay_format: \"g:i a\"",
+		"\treturn_format: \"g:i a\"",
+		"${0}"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"label": "Field: Taxonomy Field",
+	"description": "Allow user to pick from available taxonomies",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: taxonomy",
+		"\ttaxonomy: ${2:my_tax}",
+		"\tfield_type: ${3|'multi_select','checkbox','radio','select'|}",
+		"\tallow_null: false",
+		"\tadd_term: false",
+		"\tsave_terms: false",
+		"\tload_terms: false",
+		"\treturn_format: ${4|'object','id'|}",
+		"${0}"
+	]
+}

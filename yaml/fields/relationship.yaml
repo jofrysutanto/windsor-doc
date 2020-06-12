@@ -1,0 +1,27 @@
+if:
+  properties:
+    type:
+      const: "relationship"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/relational"
+    -
+      properties:
+        return_format:
+          type: string
+          enum: ['object', 'id']
+        filters:
+          type: array
+          examples: ['search', 'post_type', 'taxonomy']
+          description: "Additional filtering tools when editing this field."
+        elements:
+          type: array
+          examples: ['featured_image']
+          description: "Selected elements will be displayed in each result."
+        min:
+          type: integer
+          description: "Minimum number of posts."
+        max:
+          type: integer
+          description: "Maximum number of posts."

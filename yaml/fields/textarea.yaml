@@ -1,0 +1,20 @@
+if:
+  properties:
+    type:
+      const: "textarea"
+then:
+  allOf:
+    - $ref: "#/definitions/input_placeholder"
+    - $ref: "#/definitions/input_prepend_append"
+    - $ref: "#/definitions/input_default"
+    - properties:
+        new_lines:
+          type: string
+          description: Controls how new lines are rendered
+          examples:
+            - "'wpautop'"
+            - "'br'"
+            - "''"
+        rows:
+          type: integer
+          description: "Sets the textarea height"

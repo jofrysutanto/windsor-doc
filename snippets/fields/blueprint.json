@@ -1,0 +1,12 @@
+{
+	"label": "Layout: Blueprint",
+	"description": "Copy fields from given blueprint",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"blueprint\"",
+		"\tsource: \"${2|my-blueprint|}\"",
+		"\tprefix: false",
+		"\tprefix_label: false"
+	]
+}

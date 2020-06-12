@@ -1,0 +1,30 @@
+if:
+  properties:
+    type:
+      const: "repeater"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        layout:
+          type: string
+          examples:
+            - "'block'"
+            - "'table'"
+            - "'row'"
+        collapsed:
+          type: string
+          description: "Specify sub field to show when row is collapsed."
+        min:
+          type: integer
+          description: "Minimum number of rows."
+        max:
+          type: integer
+          description: "Maximum number of rows."
+        button_label:
+          type: string
+          default: 'Add Row'
+        sub_fields:
+          $ref: "#/definitions/fields"
+      required: ["layout", "sub_fields"]

@@ -1,0 +1,20 @@
+if:
+  properties:
+    type:
+      const: "radio"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/choices"
+    -
+      properties:
+        default_value:
+          type: string
+          description: "Default selected value when creating a new post."
+        other_choice:
+          type: boolean
+          description: "Add 'other' choice to allow for custom values"
+        layout:
+          type: string
+          description: "Layout arrangement for choices"
+          enum: ['horizontal', 'vertical']

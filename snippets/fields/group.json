@@ -1,0 +1,12 @@
+{
+	"label": "Layout: Group",
+	"description": "Organize fields into a group.",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"group\"",
+		"\tlayout: \"${2|block,table,row|}\"",
+		"\tsub_fields:",
+		"\t\t${0}"
+	]
+}

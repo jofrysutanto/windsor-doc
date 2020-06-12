@@ -1,0 +1,26 @@
+{
+  "name": "windsor-doc",
+  "version": "1.0.0",
+  "description": "Windsor ACF - Documentation",
+  "main": "gulpfile.js",
+  "keywords": [
+    "windsor"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "Jofry HS",
+  "license": "ISC",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "gulp build && vuepress build docs"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "read-yaml": "^1.1.0"
+  },
+  "devDependencies": {
+    "vuepress": "^1.5.1"
+  }
+}

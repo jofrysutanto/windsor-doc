@@ -1,0 +1,14 @@
+{
+	"label": "Field: Google Map Field",
+	"description": "Renders google map",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"google_map\"",
+		"\tcenter_lat: '-37.854496'",
+		"\tcenter_lng: '144.9902323'",
+		"\tzoom: 14",
+		"\theight: 400",
+		"${0}"
+	]
+}

@@ -1,0 +1,28 @@
+if:
+  properties:
+    type:
+      const: "wysiwyg"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/input_default"
+    - properties:
+        tabs:
+          type: string
+          examples:
+            - "'all'"
+            - "'visual'"
+            - "'text'"
+          description: "Available tabs on TinyMCE editor."
+        toolbar:
+          type: string
+          examples:
+            - "'full'"
+            - "'basic'"
+          description: "Choose between 'basic' or 'full' content editing features"
+        media_upload:
+          type: boolean
+          description: "Whether or not to show media upload button"
+        delay:
+          type: boolean
+          description: "TinyMCE will not be initialized until field is clicked"

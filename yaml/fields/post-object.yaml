@@ -1,0 +1,16 @@
+if:
+  properties:
+    type:
+      const: "post_object"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/relational"
+    -
+      properties:
+        return_format:
+          type: string
+          enum: ['object', 'id']
+        multiple:
+          type: boolean
+          default: false

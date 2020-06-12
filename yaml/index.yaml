@@ -1,0 +1,50 @@
+"$schema": http://json-schema.org/draft-04/schema#
+name: Package
+type: object
+additionalProperties: true
+required:
+  - fields
+defaultSnippets:
+  - "@snippets/new-field-group"
+definitions:
+  - "@yaml/definitions/fields"
+  - "@yaml/definitions/input-default"
+  - "@yaml/definitions/input-required"
+  - "@yaml/definitions/input-placeholder"
+  - "@yaml/definitions/input-prepend-append"
+  - "@yaml/definitions/file-default"
+  - "@yaml/definitions/file-image"
+  - "@yaml/definitions/choices"
+  - "@yaml/definitions/relational"
+properties:
+  title:
+    type: string
+    description: Title of your ACF field, this appears in Wordpress metabox
+  key:
+    description:
+      Globally unique key. This same key is used to prefix all fields within
+      this field group.
+    type: string
+    pattern: "^[a-z0-9-_]+$"
+  menu_order:
+    description: 'Field groups with a lower order will appear first'
+    pattern: "^[0-9]+$"
+  position:
+    description: 'Position of custom fields'
+    enum: ['acf_after_title', 'normal', 'side']
+  style:
+    description: "Display style"
+    enum: ['default', 'seamless']
+  label_placement:
+    description: "Location of field label"
+    enum: ['top', 'left']
+  instruction_placement:
+    description: "Location of instruction fields"
+    enum: ['label', 'field']
+  active:
+    description: "Boolean flag to enable/disable this field group"
+    type: boolean
+  hide_on_screen: "@yaml/hide-on-screen"
+  location: "@yaml/location"
+  fields:
+    $ref: "#/definitions/fields"

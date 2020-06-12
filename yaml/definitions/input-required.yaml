@@ -1,0 +1,6 @@
+input_required:
+  type: object
+  properties:
+    required:
+      description: 'Whether or not this field is required (has to be filled in)'
+      type: boolean

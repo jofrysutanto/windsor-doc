@@ -1,0 +1,8 @@
+if:
+  properties:
+    type:
+      const: "url"
+then:
+  allOf:
+    - $ref: "#/definitions/input_placeholder"
+    - $ref: "#/definitions/input_default"

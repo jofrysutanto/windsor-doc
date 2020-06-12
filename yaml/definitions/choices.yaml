@@ -1,0 +1,11 @@
+choices:
+  type: object
+  properties:
+    choices:
+      type: [object, array]
+      description: "Array of choices. For more control, you can define key value pairs object."
+    return_format:
+      type: string
+      enum: ['value', 'label', 'array']
+      description: "Specify the value returned"
+

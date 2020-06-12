@@ -1,0 +1,18 @@
+if:
+  properties:
+    type:
+      const: "true_false"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        default_value:
+          type: boolean
+        message:
+          type: string
+          description: "Displays text alongside the checkbox / switch"
+        ui:
+          type: boolean
+          description: "Use stylised UI"
+          deafult: true

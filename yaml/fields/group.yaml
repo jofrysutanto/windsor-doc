@@ -1,0 +1,19 @@
+if:
+  properties:
+    type:
+      const: "group"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        layout:
+          type: string
+          examples:
+            - "'block'"
+            - "'table'"
+            - "'row'"
+        sub_fields:
+          $ref: "#/definitions/fields"
+      required: ["layout", "sub_fields"]
+

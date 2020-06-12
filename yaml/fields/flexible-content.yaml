@@ -1,0 +1,41 @@
+if:
+  properties:
+    type:
+      const: "flexible_content"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        min:
+          type: integer
+          description: "Minimum number of layouts."
+        max:
+          type: integer
+          description: "Maximum number of layouts."
+        button_label:
+          type: string
+          default: 'Add Row'
+        layouts:
+          type: [array, object]
+          additionalProperties:
+            type: object
+            properties:
+              display:
+                type: string
+                examples:
+                  - "'block'"
+                  - "'table'"
+                  - "'row'"
+              label:
+                type: string
+              min:
+                type: integer
+                description: "Minimum number of rows of this layout."
+              max:
+                type: integer
+                description: "Maximum number of rows of this layout."
+              sub_fields:
+                $ref: "#/definitions/fields"
+                description: "Specify fields to be added to this layout."
+              required: ["display", "label", "sub_fields"]

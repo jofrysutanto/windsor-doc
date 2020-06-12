@@ -1,0 +1,12 @@
+relational:
+  type: object
+  properties:
+    post_type:
+      type: array
+      description: "Limit selection to specific post types. Use empty array to allow all post types."
+      examples: ['post', 'page']
+    taxonomy:
+      type: array
+      description: "Limit selection to specific posts of specific taxonomies. Use {tax_term}:{tax_value} format: e.g. 'category:art', or empty array to allow all."
+      examples: ['category']
+

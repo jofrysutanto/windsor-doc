@@ -1,0 +1,14 @@
+{
+	"label": "Field: Post Object Field",
+	"description": "Allow user to pick from post(s) from existing post types",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"post_object\"",
+		"\treturn_format: '${2|object,array|}'",
+		"\tpost_type: []",
+		"\ttaxonomy: [] # e.g. category:art",
+		"\tmultiple: false",
+		"${0}"
+	]
+}

@@ -1,0 +1,23 @@
+if:
+  properties:
+    type:
+      const: "date_picker"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        display_format:
+          type: string
+          default: 'd/m/Y'
+          description: "The format displayed when editing a post. Use PHP `date()` formatting rule."
+        return_format:
+          type: string
+          default: 'd/m/Y'
+          description: "The format returned via template functions. Use PHP `date()` formatting rule."
+        first_day:
+          type: integer
+          description: "Day that the week starts from. Provide value from 0 (Sunday) to 6 (Saturday)"
+          default: 1
+          minimum: 0
+          maximum: 6

@@ -1,0 +1,20 @@
+if:
+  properties:
+    type:
+      const: "accordion"
+then:
+  allOf:
+    -
+      properties:
+        open:
+          type: boolean
+          default: true
+          description: Display this accordion as open on page load.
+        multi_expand:
+          type: boolean
+          default: true
+          description: Allow this accordion to open without closing others.
+        endpoint:
+          type: boolean
+          default: false
+          description: Define an endpoint for the previous accordion to stop. This accordion will not be visible.

@@ -1,0 +1,14 @@
+{
+	"label": "Field: Page Link Field",
+	"description": "Allow user to get URL from post(s) from existing post types",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"page_link\"",
+		"\tpost_type: []",
+		"\ttaxonomy: [] # e.g. category:art",
+		"\tallow_archives: false",
+		"\tmultiple: false",
+		"${0}"
+	]
+}

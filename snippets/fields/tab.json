@@ -1,0 +1,12 @@
+{
+	"label": "Layout: Tab",
+	"description": "Organize fields into tabs.",
+	"body": [
+		"${1:my_field}_tab:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"tab\"",
+		"\tplacement: \"${2|top,left|}\"",
+		"\tendpoint: false",
+		"${0}"
+	]
+}

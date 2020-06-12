@@ -1,0 +1,12 @@
+{
+	"label": "Field: Boolean — True or False Toggle",
+	"description": "Checkbox or switch toggle",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"true_false\"",
+		"\tui: true",
+		"\tdefault: ${2|true,false|}",
+		"${0}"
+	]
+}

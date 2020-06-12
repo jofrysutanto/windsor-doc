@@ -1,0 +1,13 @@
+{
+	"label": "Field: File Field",
+	"description": "File upload/selection field",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"file\"",
+		"\treturn_format: '${2|array,url,id|}'",
+		"\tmax_size: 5",
+		"\tmime_types: '' # Allowed mime types ",
+		"${0}"
+	]
+}

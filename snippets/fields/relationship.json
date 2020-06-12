@@ -1,0 +1,21 @@
+{
+	"label": "Field: Relationship Field",
+	"description": "Allow user to pick multiple posts in expanded search table.",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"relationship\"",
+		"\tpost_type:",
+		"\t\t- ${2:'post'}",
+		"\tfilters:",
+		"\t\t- 'search'",
+		"\t\t- 'post_type'",
+		"\t\t- 'taxonomy'",
+		"\telements:",
+		"\t\t- 'featured_image'",
+		"\tmin: 0",
+		"\tmax: 0",
+		"\treturn_format: 'object'",
+		"${0}"
+	]
+}

@@ -1,0 +1,5 @@
+input_default:
+  type: object
+  properties:
+    default_value:
+      description: 'Appears when creating a new post'

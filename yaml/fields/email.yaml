@@ -1,0 +1,9 @@
+if:
+  properties:
+    type:
+      const: "email"
+then:
+  allOf:
+    - $ref: "#/definitions/input_placeholder"
+    - $ref: "#/definitions/input_prepend_append"
+    - $ref: "#/definitions/input_default"

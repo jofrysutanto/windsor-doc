@@ -1,0 +1,21 @@
+description: "Items to be hidden from the edit screen. If multiple field groups appear on an edit screen, the first field group's options will be used (the one with the lowest order number)"
+type: array
+items:
+  type: string
+  enum:
+    - permalink
+    - the_content
+    - excerpt
+    - discussion
+    - comments
+    - revisions
+    - slug
+    - author
+    - format
+    - page_attributes
+    - featured_image
+    - categories
+    - tags
+    - send-trackbacks
+additionalItems:
+  type: string

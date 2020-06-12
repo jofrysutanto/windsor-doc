@@ -1,0 +1,14 @@
+{
+	"label": "Field: WYSIWYG / Rich Content Editor",
+	"description": "TinyMCE rich content editing field",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"wysiwyg\"",
+		"\ttabs: 'all'",
+		"\ttoolbar: 'basic'",
+		"\tmedia_upload: true",
+		"\tdelay: true",
+		"\t${0}"
+	]
+}

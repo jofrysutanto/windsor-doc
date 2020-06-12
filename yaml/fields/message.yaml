@@ -1,0 +1,21 @@
+if:
+  properties:
+    type:
+      const: "message"
+then:
+  allOf:
+    -
+      properties:
+        message:
+          type: string
+        new_lines:
+          type: string
+          description: Controls how new lines are rendered.
+          examples:
+            - "'wpautop'"
+            - "'br'"
+            - "''"
+        esc_html:
+          type: boolean
+          default: false
+          description: Allow HTML markup to display as visible text instead of rendering.

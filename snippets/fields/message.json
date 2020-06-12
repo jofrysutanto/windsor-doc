@@ -1,0 +1,12 @@
+{
+	"label": "Layout: Message",
+	"description": "Show instructional message",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: 'message'",
+		"\tmessage: ${2:Your message}",
+		"\tesc_html: ${3|true,false|}",
+		"${0}"
+	]
+}

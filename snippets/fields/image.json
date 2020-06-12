@@ -1,0 +1,14 @@
+{
+	"label": "Field: Image Field",
+	"description": "Image upload/selection field",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"image\"",
+		"\tpreview_size: '${4|thumbnail,medium,large,full|}'",
+		"\tmax_size: 5 # in MB",
+		"\tmax_width: 2000 # in px",
+		"\tmax_height: 2000 # in px",
+		"${0}"
+	]
+}

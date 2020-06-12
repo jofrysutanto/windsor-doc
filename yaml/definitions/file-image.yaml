@@ -1,0 +1,22 @@
+file_image:
+  type: object
+  properties:
+    preview_size:
+      type: string
+      examples:
+        - "'thumbnail'"
+        - "'medium'"
+        - "'large'"
+        - "'full'"
+    min_width:
+      type: 'number'
+      description: "Minimum allowed size in pixels"
+    min_height:
+      type: 'number'
+      description: "Minimum allowed size in pixels"
+    max_width:
+      type: 'number'
+      description: "Maximum allowed size in pixels"
+    max_height:
+      type: 'number'
+      description: "Maximum allowed size in pixels"

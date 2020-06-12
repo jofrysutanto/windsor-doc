@@ -1,0 +1,11 @@
+{
+	"label": "Field: Color Picker Field",
+	"description": "Renders color picker widget",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"color_picker\"",
+		"\tdefault_value: \"#FFFFFF\"",
+		"${0}"
+	]
+}

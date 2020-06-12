@@ -1,0 +1,96 @@
+fields:
+  type: ['object', 'array']
+  defaultSnippets:
+    # Basic
+    - '@snippets/fields/text'
+    - '@snippets/fields/textarea'
+    - '@snippets/fields/number'
+    - '@snippets/fields/range'
+    - '@snippets/fields/email'
+    - '@snippets/fields/url'
+    # Content
+    - '@snippets/fields/image'
+    - '@snippets/fields/file'
+    - '@snippets/fields/wysiwyg'
+    - '@snippets/fields/gallery'
+    # Choices
+    - '@snippets/fields/select'
+    - '@snippets/fields/checkbox'
+    - '@snippets/fields/radio'
+    - '@snippets/fields/button-group'
+    - '@snippets/fields/true-false'
+    # Relational
+    - '@snippets/fields/link'
+    - '@snippets/fields/post-object'
+    - '@snippets/fields/page-link'
+    - '@snippets/fields/relationship'
+    - '@snippets/fields/taxonomy'
+    - '@snippets/fields/user'
+    # jQuery
+    - '@snippets/fields/google-map'
+    - '@snippets/fields/date-picker'
+    - '@snippets/fields/date-time-picker'
+    - '@snippets/fields/time-picker'
+    - '@snippets/fields/color-picker'
+    # Layout
+    - '@snippets/fields/message'
+    - '@snippets/fields/accordion'
+    - '@snippets/fields/tab'
+    - '@snippets/fields/group'
+    - '@snippets/fields/repeater'
+    - '@snippets/fields/flexible-content'
+    - '@snippets/fields/clone'
+    # Custom Extensions
+    - '@snippets/fields/blueprint'
+  # Using `additionalProperties` to bypass key validation
+  additionalProperties:
+    type: object
+    properties: '@yaml/fields-default'
+    defaultSnippets:
+    - '@snippets/conditional-logic'
+    required: ['type', 'label']
+    # Merge all our fields yaml files
+    allOf:
+      # Basic
+      - "@yaml/fields/text"
+      - "@yaml/fields/textarea"
+      - "@yaml/fields/number"
+      - "@yaml/fields/range"
+      - "@yaml/fields/email"
+      - "@yaml/fields/url"
+      # Content
+      - "@yaml/fields/image"
+      - "@yaml/fields/file"
+      - "@yaml/fields/wysiwyg"
+      - "@yaml/fields/oembed"
+      - "@yaml/fields/gallery"
+      # Choices
+      - "@yaml/fields/select"
+      - "@yaml/fields/checkbox"
+      - "@yaml/fields/radio"
+      - "@yaml/fields/button-group"
+      - "@yaml/fields/true-false"
+      # Relational
+      - "@yaml/fields/link"
+      - "@yaml/fields/post-object"
+      - "@yaml/fields/page-link"
+      - "@yaml/fields/relationship"
+      - "@yaml/fields/taxonomy"
+      - "@yaml/fields/user"
+      # jQuery
+      - "@yaml/fields/google-map"
+      - "@yaml/fields/date-picker"
+      - "@yaml/fields/date-time-picker"
+      - "@yaml/fields/time-picker"
+      - "@yaml/fields/color-picker"
+      # Layout
+      - "@yaml/fields/message"
+      - "@yaml/fields/accordion"
+      - "@yaml/fields/tab"
+      - "@yaml/fields/group"
+      - "@yaml/fields/repeater"
+      - "@yaml/fields/flexible-content"
+      - "@yaml/fields/clone"
+      # Custom Extensions
+      - "@yaml/fields/blueprint"
+    additionalProperties: true

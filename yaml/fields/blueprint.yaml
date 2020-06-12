@@ -1,0 +1,23 @@
+if:
+  properties:
+    type:
+      const: "blueprint"
+then:
+  allOf:
+    -
+      properties:
+        excludes:
+          type: array
+          description: "Specify fields to be excluded (NOT copied)."
+        only:
+          type: array
+          description: "Only fields listed here will be copied."
+        layout:
+          type: array
+          description: "Layout configuration, allowing you to re-order and set the wrapper width, e.g. 'heading@50'."
+        source:
+          type: string
+          default: 'The name of blueprint to be used. This is generally the name of the blueprint file without the extension, e.g. "banner"'
+        merge:
+          $ref: "#/definitions/fields"
+      required: ["source"]

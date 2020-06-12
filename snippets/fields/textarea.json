@@ -1,0 +1,12 @@
+{
+	"label": "Field: Text Area Field",
+	"description": "New Textarea field",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: 'textarea'",
+		"\tnew_lines: ${2|'wpautop','br',''|}",
+		"\trows: 4",
+		"${0}"
+	]
+}

@@ -1,0 +1,28 @@
+if:
+  properties:
+    type:
+      const: "select"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/choices"
+    -
+      properties:
+        default_value:
+          type: ['string', 'array']
+          description: "Default value; if multiple values are allowed, you can provide array of default values."
+        allow_null:
+          type: boolean
+          description: "Allow clearing of selection"
+        multiple:
+          type: boolean
+          description: "Allow selection of multiple values"
+          default: false
+        ui:
+          type: boolean
+          description: "Use stylised UI"
+          default: true
+        ajax:
+          type: boolean
+          description: "Enable AJAX to lazy load choices"
+          default: false

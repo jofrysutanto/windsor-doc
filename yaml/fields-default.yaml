@@ -1,0 +1,22 @@
+type:
+  type: string
+  description: "The type of the field. e.g. 'text', 'textarea', etc."
+label:
+  type: string
+  description: "Field label which will appear on the EDIT page"
+instructions:
+  type: string
+  description: "Instructions for authors. Shown when submitting data."
+required:
+  type: boolean
+  default: true
+wrapper:
+  type: object
+  properties:
+    width:
+      type: integer
+    class:
+      type: string
+    id:
+      type: string
+conditional_logic: "@yaml/conditional-logic"

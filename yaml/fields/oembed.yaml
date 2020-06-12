@@ -1,0 +1,14 @@
+if:
+  properties:
+    type:
+      const: "oembed"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - properties:
+        width:
+          type: 'number'
+          description: "Size in pixels"
+        height:
+          type: 'number'
+          description: "Size in pixels"

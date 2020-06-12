@@ -1,0 +1,25 @@
+description: "Conditionally show this field based on sets of rules"
+type:
+  - "null"
+  - array
+items:
+  type: array
+  items:
+    type: object
+    properties:
+      field:
+        type: string
+        description: Supply the key of the field you will be referring to.
+      operator:
+        type: string
+        description: "Choose logical operator used for comparison"
+        examples:
+          - "'=='"
+          - "'!='"
+          - "'!=empty'"
+          - "'==empty'"
+          - "'==pattern'"
+          - "'==contains'"
+      value:
+        type: [string, boolean]
+        description: The value to be tested

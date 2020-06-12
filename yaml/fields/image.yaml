@@ -1,0 +1,9 @@
+if:
+  properties:
+    type:
+      const: "image"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/file_default"
+    - $ref: "#/definitions/file_image"

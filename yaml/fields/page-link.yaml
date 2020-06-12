@@ -1,0 +1,21 @@
+if:
+  properties:
+    type:
+      const: "page_link"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/relational"
+    -
+      properties:
+        allow_null:
+          type: boolean
+          default: false
+          description: "Allow empty value."
+        allow_archives:
+          type: boolean
+          default: false
+          description: "Allow selection of archive pages."
+        multiple:
+          type: boolean
+          default: false

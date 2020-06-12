@@ -1,0 +1,28 @@
+file_default:
+  type: object
+  properties:
+    return_format:
+      type: string
+      examples:
+        - 'array'
+        - 'url'
+        - 'id'
+    library:
+      type: string
+      examples:
+        - "'all'"
+        - "'uploadedTo'"
+      description: "Limit the media library choice"
+    min_size:
+      type: 'number'
+      description: "Minimum allowed size in MB"
+    max_size:
+      type: 'number'
+      description: "Maximum allowed size in MB"
+    file_mime:
+      type: object
+      properties:
+        mime_types:
+          type: 'string'
+          description: "Comma separated list. Omit this property to allow all types."
+

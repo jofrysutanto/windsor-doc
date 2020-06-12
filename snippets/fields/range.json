@@ -1,0 +1,13 @@
+{
+	"label": "Field: Range Field",
+	"description": "New range slider field",
+	"body": [
+		"${1:my_field}:",
+		"\ttype: range",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\tmin: 0",
+		"\tmax: 10",
+		"\tstep: 1",
+		"${0}"
+	]
+}

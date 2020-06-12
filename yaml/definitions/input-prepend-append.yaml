@@ -1,0 +1,8 @@
+input_prepend_append:
+  properties:
+    prepend:
+      type: string
+      description: 'Appears before the input'
+    append:
+      type: string
+      description: 'Appears after the input'

@@ -1,0 +1,8 @@
+if:
+  properties:
+    type:
+      const: "file"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/file_default"

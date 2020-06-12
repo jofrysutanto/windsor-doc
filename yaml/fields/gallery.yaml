@@ -1,0 +1,22 @@
+if:
+  properties:
+    type:
+      const: "gallery"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    - $ref: "#/definitions/file_default"
+    - $ref: "#/definitions/file_image"
+    - properties:
+        insert:
+          type: string
+          description: 'Specify where new attachments are added.'
+          examples:
+            - 'prepend'
+            - 'append'
+        min:
+          type: integer
+          description: 'Minimum number of selection'
+        max:
+          type: integer
+          description: 'Maximum number of selection'

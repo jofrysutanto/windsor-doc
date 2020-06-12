@@ -1,0 +1,14 @@
+{
+	"label": "Field: Checkboxes",
+	"description": "Allow user to select one or more values from checkboxes",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+    "\ttype: \"checkbox\"",
+    "\tlayout: horizontal",
+		"\treturn_format: value",
+		"\tchoices:",
+		"\t\t${2:value}: ${3:'Label'}",
+		"\t\t${0}"
+	]
+}

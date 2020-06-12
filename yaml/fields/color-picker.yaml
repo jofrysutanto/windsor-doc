@@ -1,0 +1,13 @@
+if:
+  properties:
+    type:
+      const: "color_picker"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        default_value:
+          type: string
+          default: '#FFFFFF'
+          description: "Set the initial color"

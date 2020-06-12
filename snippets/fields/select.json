@@ -1,0 +1,13 @@
+{
+	"label": "Field: Select Dropdown",
+	"description": "Allow user to select one or more values from dropdown",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"select\"",
+		"\tui: true",
+		"\tchoices:",
+		"\t\t${2:value}: ${3:'Label'}",
+		"\t\t${0}"
+	]
+}

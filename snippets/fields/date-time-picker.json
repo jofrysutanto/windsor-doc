@@ -1,0 +1,12 @@
+{
+	"label": "Field: Date & Time Picker Field",
+	"description": "Renders date and time picker widget",
+	"body": [
+		"${1:my_field}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"date_time_picker\"",
+		"\tdisplay_format: \"d/m/Y g:i a\"",
+		"\treturn_format: \"d/m/Y g:i a\"",
+		"${0}"
+	]
+}

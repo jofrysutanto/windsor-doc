@@ -1,0 +1,10 @@
+{
+	"label": "Field: Default Text Field",
+	"description": "Simple text input field",
+	"body": [
+		"${1:my_field}:",
+		"\ttype: text",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"${0}"
+	]
+}

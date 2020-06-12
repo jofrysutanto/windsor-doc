@@ -1,0 +1,33 @@
+if:
+  properties:
+    type:
+      const: "taxonomy"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        taxonomy:
+          type: string
+          description: "Specify the taxonomy to be displayed."
+          examples: ['category', 'post_tag', 'post_format']
+        field_type:
+          type: string
+          description: "Specify the appearance of this field."
+          enum: ['checkbox', 'multi_select', 'radio', 'select']
+        return_format:
+          type: string
+          enum: ['object', 'id']
+        allow_null:
+          type: boolean
+          description: "Whether or not to allow empty value. Ignored with `field_type` is 'checkbox'"
+        add_term:
+          type: boolean
+          description: "Allow new terms to be created whilst editing."
+        save_terms:
+          type: boolean
+          description: "Connect selected terms to the post."
+        load_terms:
+          type: boolean
+          description: "Load value from posts terms."
+      required: ['taxonomy']

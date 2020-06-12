@@ -1,0 +1,12 @@
+{
+	"label": "Location",
+	"description": "Create location option",
+	"body": [
+		"location:",
+		"\t-",
+		"\t\t-",
+		"\t\t\tparam: '${1}'",
+		"\t\t\toperator: '=='",
+		"\t\t\tvalue: '${2}'"
+	]
+}

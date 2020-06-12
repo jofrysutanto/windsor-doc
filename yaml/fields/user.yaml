@@ -1,0 +1,27 @@
+if:
+  properties:
+    type:
+      const: "user"
+then:
+  allOf:
+    - $ref: "#/definitions/input_required"
+    -
+      properties:
+        role:
+          type: array
+          examples:
+            - "'administrator'"
+            - "'author'"
+            - "'contributor'"
+            - "'subscriber'"
+            - "'editor'"
+          description: "Limit selection to specific user roles. Use empty array to allow all users to be selected."
+        return_format:
+          type: string
+          enum: ['array', 'object', 'id']
+        allow_null:
+          type: boolean
+          description: "Whether or not to allow empty value."
+        multiple:
+          type: boolean
+          default: false

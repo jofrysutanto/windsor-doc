@@ -1,0 +1,21 @@
+{
+	"label": "Layout: Flexible Content",
+	"description": "Create multi-layout fields",
+	"body": [
+		"${1:my_layout}:",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\ttype: \"flexible_content\"",
+		"\tbutton_label: \"Add Row\"",
+		"\tmin: 0",
+		"\tmax: 0",
+		"\tlayouts:",
+		"\t\tlayout_1:",
+		"\t\t\tdisplay: 'block'",
+		"\t\t\tlabel: 'Layout 1'",
+		"\t\t\tsub_fields:",
+		"\t\t\t\tmy_field:",
+		"\t\t\t\t\ttype: 'text'",
+		"\t\t\t\t\tlabel: 'My Field'",
+		"\t\t${0}"
+	]
+}
