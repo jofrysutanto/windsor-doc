@@ -8,6 +8,7 @@ node_modules
 
 # Vuepress
 docs/.vuepress/dist
+docs/.vuepress/public/schema.json
 
 # OS files
 .DS_Store
