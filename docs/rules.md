@@ -1,6 +1,6 @@
 # Transformation Rules
 
-At its core, Windsor parse YAML files and apply various transformation rules on each fields and field groups; the results of these transformations are then passed on to ACF for registration.
+At its core, Windsor parses YAML files and apply various transformation rules on each field and field groups; the results of these transformations are then passed on to ACF for registration.
 
 Windsor lets you tap into these transformation rules, allowing you to make changes to these rules, including removing or adding your own; this is the key to truly supercharge your ACF building workflow.
 

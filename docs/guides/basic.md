@@ -12,9 +12,9 @@ blueprints:
   - 'banner.acf.yaml'
 ```
 
-YAML files within `fields` are registered prior to `pages`, this let you prioritise some files by putting them in `fields` section. For example, you might have a field group called `slider.acf.yaml` which is used for cloning; you should be registering this field under `fields`.
+YAML files within `fields` are registered before `pages`, this lets you prioritise some files by putting them in `fields` section. For example, you might have a field group called `slider.acf.yaml` which is used for cloning; you should be registering this field under `fields`.
 
-Blueprints are unique feature in Windsor, which lets you re-use collection fields without sacrificing flexibility. For more information, refer to [Blueprints](/blueprints) section.
+Blueprints are a unique feature in Windsor, which lets you re-use collection fields without sacrificing flexibility. For more information, refer to [Blueprints](/blueprints) section.
 
 ## Fields
 
@@ -49,10 +49,10 @@ As you can see above, you simply declare fields by following ACF's structure. Be
 
 ### Field Keys
 
-All fields declaration requires `key`, which is used in ACF to uniquely identify each fields. Using ACF interface, these keys are generated for you. For your fields to work correctly all of these keys *must be globally unique*.
+All fields declaration requires `key`, which is used in ACF to uniquely identify each field. Using ACF interface, these keys are generated for you. For your fields to work correctly all of these keys *must be globally unique*.
 
 ::: tip
-Don't confuse field `key` with `name`. You can have multiple fields sharing the same `name`.
+Don't confuse `key` with `name`. You can have multiple fields sharing the same `name`.
 :::
 
 Fortunately with Windsor, you only need to declare a single `key` field at the root of your YAML field group file. The remaining keys are generated for you automatically. To ensure uniqueness, these keys are all namespaced based on their parents.
@@ -75,7 +75,7 @@ fields:
 ```
 
 When Windsor registers the fields seen above, the following keys are generated:
-- The field group will be assigned with key: `default_template` which is declared at root of the YAML file.
+- The field group will be assigned with the key: `default_template` which is declared at the root of the YAML file.
 - `banner_heading` field will be assigned `banner_heading` as the `name` of the field, and `default_template_banner_heading` as the key.
 - The `role` field within the `authors` repeater will be assigned `role` as the `name` of the field, and `default_template_authors_role` as the key.
 

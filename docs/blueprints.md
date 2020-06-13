@@ -6,9 +6,9 @@ Unlike other field types, Blueprint is a custom field type introduced by Windsor
 
 - it lets you modify each cloned fields attributes
 - it is easier to resolve the right field names to use
-- it provides easier way to include/exclude and re-order cloned fields
+- it provides an easier way to include/exclude and re-order cloned fields
 
-## Getting started with blueprint
+## Getting started with a blueprint
 
 To use blueprints, start by creating a blueprint file within your `acf-yaml` directory:
 ```yaml
@@ -56,9 +56,9 @@ fields:
     prefix_label: false
 ```
 
-There are a couple things to note here:
+There are a couple of things to note here:
 - To indicate the use of blueprint, use `type: blueprint`
-- The `source` refer to the *name of the your blueprint file*. If you name your blueprint as `banner-fields.acf.yaml` then your source is `banner-fields`
+- The `source` refers to the *name of your blueprint file*. If you name your blueprint as `banner-fields.acf.yaml` then your source is `banner-fields`
 - The `prefix` and `prefix_label` works similarly to clone fields, allowing you automatically prepend the field name (using `prefix`) or field label (using `prefix_label`) to the copied fields.
 
 ## Filtering blueprint fields
@@ -103,12 +103,12 @@ fields:
 ```
 Using `merge` you are free for further customise individual copied fields; it will automatically merge the existing properties of copied fields.
 
-Windsor also provides convenient helper to let you re-arrange the fields, including adjusting the width of each fields to give you even more precise control over how these fields are rendered.
+Windsor also provides a convenient helper to let you re-arrange the fields, including adjusting the width of each field to give you even more precise control over how these fields are rendered.
 
 For example, consider this scenario:
 - we would like to render a new color picker field to set the background of the banner section
-- we don't need the description field
-- we want to heading and color picker to be displayed side by side before banner image
+- we don't need the `description` field
+- we would want `heading` and color picker to be displayed side by side before the banner image
 
 You can achieve this by using `layout` property:
 ```yaml
@@ -132,9 +132,8 @@ fields:
       - banner_image
 ```
 
-In this example, we use `merge` to create an additional field which doesn't exists in our blueprint. The reason of doing so is to allow us to mix this field into our `layout` arrangement.
+In this example, we use `merge` to create an additional field which doesn't exist in our blueprint. The reason for doing so is to allow us to mix this field into our `layout` arrangement.
 
 The `layout` property takes an array of fields, following these simple rules:
-- The order of items in array is the order fields display when rendered
-- Within each line of item, you can optionally use `@` to overwrite the wrapper width of referred field
-
+- The order of items in the array is the order fields display when rendered
+- Within each line of item, you can optionally use `@` to overwrite the wrapper width of the referred field

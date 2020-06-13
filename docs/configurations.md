@@ -19,7 +19,7 @@ Boolean flag to enable debug mode. This is useful during development when troubl
 Defaults to `false`
 
 ### path
-Windsor will attempt to find the entry file, and all other YAML files in this location.
+Windsor will attempt to find the entry file and all other YAML files in this location.
 
 Defaults to `acf-fields` directly under your active theme directory.
 
@@ -29,13 +29,13 @@ The name of the entry file where fields registration happens.
 Defaults to `index.yaml`
 
 ### parser
-Instantiable parser class, used to read each fields definition file.
+Instantiable parser class used to read each fields definition file.
 
 Defaults to `\Windsor\Parser\YamlParser`
 
 ### rules
-Array of transformation rules when transforming `fields` and `groups`.
-You may also use `acf-windsor/config/rules` filter to modify only these rules, if preferred.
+An array of transformation rules when transforming `fields` and `groups`.
+You may also use `acf-windsor/config/rules` filter to modify only these rules if preferred.
 
 For more information, refer to [Transformation Rules](/rules)
 
