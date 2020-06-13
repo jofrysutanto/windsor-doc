@@ -22,27 +22,16 @@ module.exports = {
         children: [
           '/guides/basic',
           '/guides/conditional',
-          '/guides/clone',
-          // '/guides/repeater-flex',
-          // '/guides/blueprints',
+          '/guides/clone'
         ]
       },
-      // {
-      //   title: 'Rules',   // required
-      //   path: '/rules/intro',      // optional, link of the title, which should be an absolute path and must exist
-      //   collapsable: false, // optional, defaults to true
-      //   sidebarDepth: 1,    // optional, defaults to 1
-      //   children: [
-      //     '/rules/intro',
-      //   ]
-      // },
-      // {
-      //   title: 'Blueprints',   // required
-      //   path: '/blueprints',      // optional, link of the title, which should be an absolute path and must exist
-      //   collapsable: false, // optional, defaults to true
-      //   sidebarDepth: 1,    // optional, defaults to 1
-      //   children: []
-      // },
+      {
+        title: 'Blueprints',   // required
+        path: '/blueprints',      // optional, link of the title, which should be an absolute path and must exist
+        collapsable: false, // optional, defaults to true
+        sidebarDepth: 1,    // optional, defaults to 1
+        children: []
+      },
       {
         title: 'Transform Rules',   // required
         path: '/rules',      // optional, link of the title, which should be an absolute path and must exist
