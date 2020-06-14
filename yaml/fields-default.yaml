@@ -10,6 +10,12 @@ instructions:
 required:
   type: boolean
   default: true
+wrapper_width:
+  type: [integer, string]
+wrapper_class:
+  type: string
+wrapper_id:
+  type: string
 wrapper:
   type: object
   properties:
