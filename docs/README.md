@@ -1,6 +1,6 @@
 # Introduction
 
-This package extends Advanced Custom Fields plugin for Wordpress and enables developers to write their ACF fields blazingly fast in a configuration file.
+This package extends Advanced Custom Fields plugin for WordPress and enables developers to write their ACF fields blazingly fast in a configuration file.
 
 ![ACF Windsor](./screenshot.png)
 

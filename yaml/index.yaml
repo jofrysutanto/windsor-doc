@@ -20,7 +20,7 @@ definitions:
 properties:
   title:
     type: string
-    description: Title of your ACF field, this appears in Wordpress metabox
+    description: Title of your ACF field, this appears in WordPress metabox
   key:
     description:
       Globally unique key. This same key is used to prefix all fields within

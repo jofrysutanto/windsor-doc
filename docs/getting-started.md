@@ -1,7 +1,7 @@
 # Getting Started
 
 - Install ACF Windsor via composer in your theme:
-```
+```sh
 composer require jofrysutanto/windsor "^0.9"
 ```
 - If you are using VSCode, be sure to add the Schema file to your configuration.
@@ -17,7 +17,7 @@ function register_acf_windsor()
 }
 add_action('acf/init', 'register_acf_windsor');
 ```
-- Create YAML entry file at `[your-active-theme]/acf-fields/index.yaml`, where `[your-active-theme]` refers to your currently active Wordpress theme directory. At minimum, your entry file should contain:
+- Create YAML entry file at `[your-active-theme]/acf-fields/index.yaml`, where `[your-active-theme]` refers to your currently active WordPress theme directory. At minimum, your entry file should contain:
 ```yaml
 fields: []
 pages: []
