@@ -1,0 +1,6 @@
+if:
+  properties:
+    type:
+      const: "null"
+then:
+  required: []

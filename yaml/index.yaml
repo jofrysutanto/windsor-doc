@@ -9,6 +9,7 @@ defaultSnippets:
   - "@snippets/new-blueprint"
 definitions:
   - "@yaml/definitions/fields"
+  - "@yaml/definitions/fields-blueprint"
   - "@yaml/definitions/input-default"
   - "@yaml/definitions/input-required"
   - "@yaml/definitions/input-placeholder"
@@ -48,4 +49,8 @@ properties:
   hide_on_screen: "@yaml/hide-on-screen"
   location: "@yaml/location"
   fields:
-    $ref: "#/definitions/fields"
+    allOf:
+      - $ref: "#/definitions/fields"
+      -
+        additionalProperties:
+          required: ['type', 'label']
