@@ -8,7 +8,7 @@ const mayContainSubYaml = [
   'defaultSnippets',
   'fields',
   'sub_fields',
-  'layouts'
+  'layouts',
 ]
 
 export default class {
@@ -71,6 +71,15 @@ export default class {
             )
           }
           return row
+        })
+      } else if (key === 'then' && 'allOf' in content[key]) {
+        content[key]['allOf'] = content[key]['allOf'].map(row => {
+          if (typeof row === 'string' && row.startsWith('@yaml')) {
+            return this.findReplaceSubYaml(
+              this.readYamlFile(row)
+            )
+          }
+          return this.findReplaceSubYaml(row)
         })
       } else if (key === 'definitions') {
         content[key] = Object.assign({}, ...content[key].map(row => {
