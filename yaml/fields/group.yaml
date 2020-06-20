@@ -15,5 +15,6 @@ then:
             - "'row'"
         sub_fields:
           $ref: "#/definitions/fields"
-      required: ["layout", "sub_fields"]
+      dependencies:
+        type: ["layout", "sub_fields"]
 

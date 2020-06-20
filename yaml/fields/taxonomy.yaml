@@ -30,4 +30,5 @@ then:
         load_terms:
           type: boolean
           description: "Load value from posts terms."
-      required: ['taxonomy']
+      dependencies:
+        type: ['taxonomy']

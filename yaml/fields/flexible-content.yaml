@@ -40,4 +40,5 @@ then:
               sub_fields:
                 $ref: "#/definitions/fields"
                 description: "Specify fields to be added to this layout."
-              required: ["display", "label", "sub_fields"]
+            dependencies:
+              type: ["display", "label", "sub_fields"]

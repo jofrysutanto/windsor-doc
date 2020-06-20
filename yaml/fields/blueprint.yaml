@@ -20,4 +20,5 @@ then:
           default: 'The name of blueprint to be used. This is generally the name of the blueprint file without the extension, e.g. "banner"'
         merge:
           $ref: "#/definitions/fields"
-      required: ["source"]
+      dependencies:
+        type: ["source"]
