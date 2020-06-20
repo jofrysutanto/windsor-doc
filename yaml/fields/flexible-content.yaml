@@ -18,6 +18,8 @@ then:
           default: 'Add Row'
         layouts:
           type: [array, object]
+          defaultSnippets:
+          - '@snippets/fields/flexible-content-layout'
           additionalProperties:
             type: object
             properties:

@@ -1,0 +1,11 @@
+{
+	"label": "Layout: Flexible Layout",
+	"description": "Create sub-layout for current Flexible Content",
+	"body": [
+		"${1:my_layout}:",
+		"\tdisplay: 'block'",
+		"\tlabel: ${1/([a-z]*)_*([a-z]*)/${1:/capitalize} ${2:/capitalize}/g}",
+		"\tsub_fields:",
+		"\t\t${0:sub_field}"
+	]
+}
