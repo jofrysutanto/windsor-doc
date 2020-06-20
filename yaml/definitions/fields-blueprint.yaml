@@ -1,4 +1,4 @@
-fields:
+fields_blueprint:
   type: ['object', 'array']
   defaultSnippets:
     # Basic
@@ -48,6 +48,7 @@ fields:
     properties: '@yaml/fields-default'
     defaultSnippets:
     - '@snippets/conditional-logic'
+    required: []
     # Merge all our fields yaml files
     allOf:
       # Basic

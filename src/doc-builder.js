@@ -7,6 +7,7 @@ const mayContainSubYaml = [
   'additionalProperties',
   'defaultSnippets',
   'fields',
+  'fields_blueprint',
   'sub_fields',
   'layouts',
 ]

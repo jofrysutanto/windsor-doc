@@ -22,4 +22,5 @@ then:
           type: boolean
           description: 'Prefix field name.'
           default: false
-      required: ["clone", "display"]
+      dependencies:
+        type: ["clone", "display"]
