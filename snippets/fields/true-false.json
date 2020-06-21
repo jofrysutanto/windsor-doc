@@ -1,5 +1,5 @@
 {
-	"label": "Field: Boolean — True or False Toggle",
+	"label": "Field: Boolean — True/False Switch Toggle",
 	"description": "Checkbox or switch toggle",
 	"body": [
 		"${1:my_field}:",
