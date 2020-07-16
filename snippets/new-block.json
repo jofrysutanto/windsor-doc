@@ -1,0 +1,18 @@
+{
+	"label": "New Block",
+	"description": "Creates new ACF Block definition.",
+	"body": [
+		"title: '${1:My Block}'",
+		"key: '${2:my_block}'",
+		"description: '${3:My Block Description}'",
+		"category: '${4|common,formatting,layout,widgets,embed|}'",
+		"icon: 'book-alt'",
+		"mode: 'edit'",
+		"supports:",
+		"\talign: true",
+		"\tmode: true",
+		"\tmultiple: true",
+		"fields:",
+		"\t${0}"
+	]
+}

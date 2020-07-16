@@ -21,6 +21,7 @@ add_action('acf/init', 'register_acf_windsor');
 ```yaml
 fields: []
 pages: []
+blocks: []
 ```
 - Test your installation:
   - Create your first custom field YAML, for example create a file `your-theme/acf-fields/page-default.acf.yaml`:
@@ -48,6 +49,7 @@ pages: []
   fields: []
   pages:
     - page-default.acf.yaml
+  blocks: []
   ```
   - You have successfully registered a new field group which will be made available when creating a new default page.
   - For more in-depth guide, check out the [guides](/guides/basic) section

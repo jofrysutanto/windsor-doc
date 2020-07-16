@@ -40,7 +40,8 @@ module.exports = {
         children: [
           '/guides/basic',
           '/guides/conditional',
-          '/guides/clone'
+          '/guides/clone',
+          '/guides/blocks'
         ]
       },
       {

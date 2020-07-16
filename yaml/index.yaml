@@ -7,6 +7,7 @@ required:
 defaultSnippets:
   - "@snippets/new-field-group"
   - "@snippets/new-blueprint"
+  - "@snippets/new-block"
 definitions:
   - "@yaml/definitions/fields"
   - "@yaml/definitions/fields-blueprint"
@@ -21,13 +22,17 @@ definitions:
 properties:
   title:
     type: string
-    description: Title of your ACF field, this appears in WordPress metabox
+    description: Title of your ACF field, this appears in WordPress metabox. For blocks, this is displayed title in Gutenberg.
   key:
     description:
       Globally unique key. This same key is used to prefix all fields within
-      this field group.
+      this field group. For ACF blocks, this is the unique name that identifies the block.
     type: string
     pattern: "^[a-z0-9-_]+$"
+  description:
+    description:
+      This is a short description for your field group or block.
+    type: string
   menu_order:
     description: 'Field groups with a lower order will appear first'
     pattern: "^[0-9]+$"
@@ -48,6 +53,49 @@ properties:
     type: boolean
   hide_on_screen: "@yaml/hide-on-screen"
   location: "@yaml/location"
+  # ACF Blocks configurations
+  category:
+    description: "ACF Block - Categories ares used help users browse and discover blocks."
+    enum: ['common','formatting','layout','widgets','embed' ]
+  icon:
+    description: ACF Block - An icon property can be specified to make it easier to identify a block. Refer to https://developer.wordpress.org/resource/dashicons/ for built-in icon sets.
+    type: [string, object]
+    properties:
+      background:
+        description: Background color to appear with the icon
+      foreground:
+        description: "Specifying a color for the icon (optional: if not set, a readable color will be automatically defined)"
+      src:
+        description: "Specifying a dashicon for the block"
+  keywords:
+    description: "ACF Block - An array of search terms to help user discover the block while searching"
+    type: array
+  post_types:
+    description: "ACF Block - An array of post types to restrict this block type to"
+    type: array
+  mode:
+    description: "ACF Block - The display mode for your block."
+    enum: ['auto', 'preview', 'edit']
+  align:
+    description: "ACF Block - The default block alignment."
+    enum: ['left', 'center', 'right', 'wide', 'full']
+  render_template:
+    description: "ACF Block - The path to a template file used to render the block HTML."
+  supports:
+    description: "ACF Block - An array of features to support. All properties from the JavaScript block supports documentation may be used."
+    type: object
+    properties:
+      align:
+        description: "Adds block controls which allow the user to change the block’s alignment. Use `true/false` to show/hide the alignment toolbar, or provide array of alignment names."
+        type: [boolean, array]
+      mode:
+        description: "Allows the user to toggle between edit and preview modes via a button."
+        type: boolean
+      multiple:
+        description: "Allows the block to be added multiple times."
+        type: boolean
+  handler:
+    description: "ACF Block - PHP class to handle template and assets calback. This class should extend from `\\Windsor\\AcfBlock`."
   fields:
     allOf:
       - $ref: "#/definitions/fields"

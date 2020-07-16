@@ -10,11 +10,15 @@ pages:
   - 'page-contact.acf.yaml'
 blueprints:
   - 'banner.acf.yaml'
+blocks:
+  - 'my-gutenberg-block.acf.yaml'
 ```
 
 YAML files within `fields` are registered before `pages`, this lets you prioritise some files by putting them in `fields` section. For example, you might have a field group called `slider.acf.yaml` which is used for cloning; you should be registering this field under `fields`.
 
 Blueprints are a unique feature in Windsor, which lets you re-use collection fields without sacrificing flexibility. For more information, refer to [Blueprints](/blueprints) section.
+
+Finally, `blocks` section lets you define [ACF Blocks](https://www.advancedcustomfields.com/resources/blocks/). Refer to the [Blocks](./blocks) section for more information about how to configure your custom blocks.
 
 ## Fields
 
