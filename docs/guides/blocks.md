@@ -1,6 +1,6 @@
 # ACF Blocks
 
-Block fields are configured the same way as normal custom fields, for the most part. Internally, a single block YAML definition in both ACF Block registration (`acf_register_block_type`) **and** custom field group definition.
+Block fields are configured the same way as other custom fields, for the most part. Internally, a single block YAML definition results in both ACF Block registration (`acf_register_block_type`) **and** custom field group definition.
 
 ```yaml
 # Top level keys are passed on to Block registration
@@ -29,14 +29,14 @@ If you are using our [IDE integration](./.../ide), you can 'New Block' snippet t
 
 When registering block in ACF, you can optionally use PHP callbacks to render your template using `render_callback` or to enqueue assets programmatically using `enqueue_assets`.
 
-Since ACF Windsor is configuration-based, it is recommended not to write PHP functions directly in your configuration file. Instead, use `handler` property and supply a PHP class which should extend from `\Windsor\AcfBlock`. This class only need to extend `render` and/or `enqueueAssets` method:
-- Render your resulting HTML template within `render` method.
+Since ACF Windsor is configuration-based, it is recommended not to write PHP functions directly in your configuration file. Instead, use `handler` property and supply a PHP class which should extend from `\Windsor\AcfBlock`. This class only need to extend the `render` and/or `enqueueAssets` method:
+- Render your resulting HTML template within the `render` method.
 - Enqueue your block javascript/stylesheet within `enqueueAssets` method.
-Refer to example below on how you use Windsor block handler.
+Refer to the example below on how you use Windsor block handler.
 
 ## Example
 
-The following example illustrate how you can organise your Blocks definition using ACF Windsor block handler.
+The following example illustrates how you can organise your Blocks definition using ACF Windsor block handler.
 
 ::: tip
 The example below assumes that the handler class is using [Composer PSR-4 autoloading](https://getcomposer.org/doc/04-schema.md#psr-4), where `src/` is namespaced to `App\`.
@@ -90,7 +90,7 @@ fields:
 
 ::::
 
-Next, our PHP handler and the PHP template used to render the HTML output. We will also enqueue custom css, and we will skip enqueuing javascript to keep things simple.
+Next, our PHP handler and the PHP template used to render the HTML output. We will also enqueue custom CSS, and we will skip enqueuing javascript to keep things simple.
 
 In this example, we are placing all the following files in `src/Blocks/Testimonial/` directory to match our auto-loaded PHP class namespace.
 
@@ -193,7 +193,7 @@ $image = get_field('author_image') ?: 295;
 
 ::::
 
-That's all, you should be able to find our newly-registered 'Testimonial' widget within Guternberg editor.
+That's all, you should be able to find our newly-registered 'Testimonial' widget within Gutenberg editor.
 
 ![ACF Windsor Block](./windsor-block.png)
 
