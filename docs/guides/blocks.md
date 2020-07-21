@@ -92,7 +92,7 @@ fields:
 
 Next, our PHP handler and the PHP template used to render the HTML output. We will also enqueue custom css, and we will skip enqueuing javascript to keep things simple.
 
-In this example, we are placing all the following files in `src/Blocks/Testimonial` to match our auto-loaded PHP class namespace.
+In this example, we are placing all the following files in `src/Blocks/Testimonial/` directory to match our auto-loaded PHP class namespace.
 
 :::: tabs :options="{ useUrlFragment: false }"
 
