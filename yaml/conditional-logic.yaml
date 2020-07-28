@@ -21,5 +21,5 @@ items:
           - "'==pattern'"
           - "'==contains'"
       value:
-        type: [string, boolean]
+        type: [string, boolean, integer]
         description: The value to be tested
