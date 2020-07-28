@@ -18,6 +18,30 @@ Boolean flag to enable debug mode. This is useful during development when troubl
 
 Defaults to `false`
 
+### ui
+You can set this to `true` to enable YAML export tool which will can be accessed within WordPress administration backend.
+
+![Windsor Admin Interface](./ui-screenshot.jpg)
+
+Optionally, you can further configure this behaviour by supplying array to the `ui` configuration:
+
+```php
+function modify_windsor_config($config) {
+  return array_merge($config, [
+    'ui' => [
+      // {boolean} Same effect as `'ui' => true`
+      'enabled' => true,
+      // {boolean} Use this to inline Windsor's styles and scripts.
+      // This is useful when working with WordPress environment which doesn't allow public url access to `vendor/` directory.
+      'inline_assets' => true,
+    ]
+  ]);
+}
+add_filter('acf-windsor/config', 'modify_windsor_config');
+```
+
+This interface is turned disabled by default, and we recommend keeping it disabled when not in use.
+
 ### path
 Windsor will attempt to find the entry file and all other YAML files in this location.
 
