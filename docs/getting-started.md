@@ -60,9 +60,10 @@ You can access the exporter tool by enabling `ui` configuration when registering
 ```php
 function register_acf_windsor()
 {
-    \Windsor\Capsule\Manager::make()->register([
-      'ui' => true
-    ]);
+    \Windsor\Capsule\Manager::make([
+        'ui' => true
+      ])
+      ->register();
 }
 add_action('acf/init', 'register_acf_windsor');
 ```
