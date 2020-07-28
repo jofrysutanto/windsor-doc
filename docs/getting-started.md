@@ -54,3 +54,19 @@ blocks: []
   - You have successfully registered a new field group which will be made available when creating a new default page.
   - For more in-depth guide, check out the [guides](/guides/basic) section
 
+### Have an existing fields in ACF?
+
+You can access the exporter tool by enabling `ui` configuration when registering Windsor:
+```php
+function register_acf_windsor()
+{
+    \Windsor\Capsule\Manager::make()->register([
+      'ui' => true
+    ]);
+}
+add_action('acf/init', 'register_acf_windsor');
+```
+
+Once enabled, you access the exporter within WordPress backend by clicking on Custom Fields > Export to YAML link in sidebar.
+
+More information about this tool can be found in [configurations section](./configurations.html#ui).
