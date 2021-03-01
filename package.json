@@ -18,7 +18,7 @@
   "dependencies": {
     "esm": "^3.2.25",
     "gulp": "^4.0.2",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "read-yaml": "^1.1.0",
     "vue-tabs-component": "^1.5.0",
     "vuepress-plugin-tabs": "^0.3.0"
